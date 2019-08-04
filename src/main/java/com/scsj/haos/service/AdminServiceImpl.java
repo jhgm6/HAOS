@@ -26,15 +26,15 @@ public class AdminServiceImpl implements AdminService {
     }
 
     public void updateAdminById(String id,Admin admin){
-        Admin adminDB = adminMapper.selectByPrimaryKey(id);
-        adminDB.setPassword(admin.getPassword());
-        adminDB.setAddress(admin.getAddress());
-        adminDB.setBirth(admin.getBirth());
-        adminDB.setGender(admin.getGender());
-        adminDB.setImg(admin.getImg());
-        adminDB.setName(admin.getName());
-        adminDB.setPhone(admin.getPhone());
-        adminMapper.updateByPrimaryKey(adminDB);
+//        Admin adminDB = adminMapper.selectByPrimaryKey(id);
+//        adminDB.setPassword(admin.getPassword());
+//        adminDB.setAddress(admin.getAddress());
+//        adminDB.setBirth(admin.getBirth());
+//        adminDB.setGender(admin.getGender());
+//        adminDB.setImg(admin.getImg());
+//        adminDB.setName(admin.getName());
+//        adminDB.setPhone(admin.getPhone());
+        adminMapper.updateByPrimaryKey(admin);
     }
 
 }
