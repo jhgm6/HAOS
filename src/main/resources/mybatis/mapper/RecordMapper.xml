@@ -89,15 +89,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
     <include refid="Base_Column_List" />
     from record
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from record
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="com.scsj.haos.common.domain.RecordExample">
     delete from record
@@ -238,16 +238,16 @@
   <update id="updateByExample" parameterType="map">
     update record
     set id = #{record.id,jdbcType=INTEGER},
-      roomNum = #{record.roomnum,jdbcType=VARCHAR},
-      type = #{record.type,jdbcType=VARCHAR},
-      inTime = #{record.intime,jdbcType=DATE},
-      outTime = #{record.outtime,jdbcType=DATE},
-      isUsed = #{record.isused,jdbcType=BIT},
-      cusId = #{record.cusid,jdbcType=VARCHAR},
-      name = #{record.name,jdbcType=VARCHAR},
-      gender = #{record.gender,jdbcType=INTEGER},
-      deposit = #{record.deposit,jdbcType=REAL},
-      phone = #{record.phone,jdbcType=VARCHAR}
+    roomNum = #{record.roomnum,jdbcType=VARCHAR},
+    type = #{record.type,jdbcType=VARCHAR},
+    inTime = #{record.intime,jdbcType=DATE},
+    outTime = #{record.outtime,jdbcType=DATE},
+    isUsed = #{record.isused,jdbcType=BIT},
+    cusId = #{record.cusid,jdbcType=VARCHAR},
+    name = #{record.name,jdbcType=VARCHAR},
+    gender = #{record.gender,jdbcType=INTEGER},
+    deposit = #{record.deposit,jdbcType=REAL},
+    phone = #{record.phone,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>

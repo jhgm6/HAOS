@@ -16,24 +16,10 @@ public class AdminServiceImpl implements AdminService {
     AdminMapper adminMapper;//服务层 注入  dao 层
 
     public Admin findAdminById(String id) {
-        Admin adminDB = adminMapper.selectByPrimaryKey(id);
-        return adminDB;
-
-//        AdminExample example = new AdminExample();
-//        example.createCriteria().andIdEqualTo(id);
-//        List<Admin> admins = adminMapper.selectByExample(example);
-//        return admins.size()>0?admins.get(0):null;
+        return adminMapper.selectByPrimaryKey(id);
     }
 
     public void updateAdminById(String id,Admin admin){
-//        Admin adminDB = adminMapper.selectByPrimaryKey(id);
-//        adminDB.setPassword(admin.getPassword());
-//        adminDB.setAddress(admin.getAddress());
-//        adminDB.setBirth(admin.getBirth());
-//        adminDB.setGender(admin.getGender());
-//        adminDB.setImg(admin.getImg());
-//        adminDB.setName(admin.getName());
-//        adminDB.setPhone(admin.getPhone());
         adminMapper.updateByPrimaryKey(admin);
     }
 

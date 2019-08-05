@@ -1,9 +1,20 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/haos
+#
+#mybatis:
+#  mapper-locations: "classpath:/mybatis/mapper/*.xml"
+
+# Breath-mint's DataBase user and password
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/haos
+    password: yjy1997930
+    url: jdbc:mysql://localhost:3306/haos?useSSL=false&allowPublicKeyRetrieval=true
 
 mybatis:
   mapper-locations: "classpath:/mybatis/mapper/*.xml"

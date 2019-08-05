@@ -17,8 +17,8 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
-    public void updateEmpById(String id) {
-
+    public void updateEmpById(String id, Emp emp) {
+        empMapper.updateByPrimaryKey(emp);
     }
 
     @Override

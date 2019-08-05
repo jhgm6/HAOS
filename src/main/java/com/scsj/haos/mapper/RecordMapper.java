@@ -12,7 +12,7 @@ public interface RecordMapper {
 
     int deleteByExample(RecordExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     int insert(Record record);
 
@@ -20,7 +20,7 @@ public interface RecordMapper {
 
     List<Record> selectByExample(RecordExample example);
 
-    Record selectByPrimaryKey(Integer id);
+    Record selectByPrimaryKey(String id);
 
     int updateByExampleSelective(@Param("record") Record record, @Param("example") RecordExample example);
 
